@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pivomat</title>
+<style>
+#set-height {
+  display: block;
+  height: 30000px;
+}
+
+.slika-ozadje {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -999;
+  background-size: cover;
+  height: 100vh;
+  display: none;
+}
+
+#view-frame {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/bkg/297.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  background-blend-mode: lighten;
+}
+
+#logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+#logo img {
+  position: absolute;
+}
+</style>
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/jquery.ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"></script>
+  
+</head>
+<body>
+
+
+<div id="set-height"></div>
+
+<div id="view-frame">
+
+  <div class="container h-100">
+  <div class="row h-100">
+
+  <div class="col-6 h-100">
+    <div class="position-absolute w-100 h-100 d-flex">
+      <div class="align-self-center w-100 h-50">
+        <img id="pivo-1" src="img/piva2/black_magic_woman.png" class="h-100 mx-auto d-block">
+      </div>
+    </div>
+    <div class="position-absolute w-100 h-100 d-flex">
+      <div class="align-self-center w-100 h-50">
+        <img id="pivo-2" src="img/piva2/gallus.png" class="h-100 mx-auto d-block">
+      </div>
+    </div>
+    <div class="position-absolute w-100 h-100 d-flex">
+      <div class="align-self-center w-100 h-50">
+        <img id="pivo-3" src="img/piva2/general_maister.png" class="h-100 mx-auto d-block">
+      </div>
+    </div>
+    <div class="position-absolute w-100 h-100 d-flex">
+      <div class="align-self-center w-100 h-50">
+        <img id="pivo-4" src="img/piva2/illusion.png" class="h-100 mx-auto d-block">
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6 h-100">
+    <div class="position-absolute w-100 h-100 d-flex">
+      <div class="align-self-center w-100" id="opis-1" style="background-color: #b48d40; padding: 50px;">
+        <h1>Title 1</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est vitae dui fringilla aliquet. Aenean ipsum ligula, ornare non vulputate vitae, pulvinar vel felis. Phasellus ultrices, felis eget varius luctus, justo elit luctus lacus, at ultricies risus lacus finibus massa. Mauris mollis, dolor pharetra rutrum dignissim, erat enim ultrices nibh, varius molestie enim lorem ut sem. Nunc quis facilisis turpis, vel sagittis tortor. Sed id gravida augue, eget faucibus ligula. Phasellus vitae libero eu erat sollicitudin faucibus. </p>
+      </div>
+    </div>
+    <div class="position-absolute w-100 h-100 d-flex">
+      <div class="align-self-center w-100" id="opis-2" style="background-color: #e3e2dd; padding: 50px; border-radius: 50px;">
+        <h1>Title 2</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est vitae dui fringilla aliquet. Aenean ipsum ligula, ornare non vulputate vitae, pulvinar vel felis. Phasellus ultrices, felis eget varius luctus, justo elit luctus lacus, at ultricies risus lacus finibus massa. Mauris mollis, dolor pharetra rutrum dignissim, erat enim ultrices nibh, varius molestie enim lorem ut sem. Nunc quis facilisis turpis, vel sagittis tortor. Sed id gravida augue, eget faucibus ligula. Phasellus vitae libero eu erat sollicitudin faucibus. </p>
+      </div>
+    </div>
+    <div class="position-absolute w-100 h-100 d-flex">
+      <div class="align-self-center w-100" id="opis-3" style="background-color: #edebec; padding: 50px; border-radius: 50px 0px 50px 0px;">
+        <h1>Title 3</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est vitae dui fringilla aliquet. Aenean ipsum ligula, ornare non vulputate vitae, pulvinar vel felis. Phasellus ultrices, felis eget varius luctus, justo elit luctus lacus, at ultricies risus lacus finibus massa. Mauris mollis, dolor pharetra rutrum dignissim, erat enim ultrices nibh, varius molestie enim lorem ut sem. Nunc quis facilisis turpis, vel sagittis tortor. Sed id gravida augue, eget faucibus ligula. Phasellus vitae libero eu erat sollicitudin faucibus. </p>
+      </div>
+    </div>
+    <div class="position-absolute w-100 h-100 d-flex">
+      <div class="align-self-center w-100" id="opis-4" style="background-color: #1e251d; padding: 50px; border-radius: 0px 50px 0px 50px; color: white">
+        <h1>Title 4</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est vitae dui fringilla aliquet. Aenean ipsum ligula, ornare non vulputate vitae, pulvinar vel felis. Phasellus ultrices, felis eget varius luctus, justo elit luctus lacus, at ultricies risus lacus finibus massa. Mauris mollis, dolor pharetra rutrum dignissim, erat enim ultrices nibh, varius molestie enim lorem ut sem. Nunc quis facilisis turpis, vel sagittis tortor. Sed id gravida augue, eget faucibus ligula. Phasellus vitae libero eu erat sollicitudin faucibus. </p>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+</div>
+
+
+<img id="ozadje-297" src="img/bkg/297.jpg" class="slika-ozadje">
+<img id="ozadje-296" src="img/bkg/296.jpg" class="slika-ozadje">
+<img id="ozadje-295" src="img/bkg/295.jpg" class="slika-ozadje">
+<img id="ozadje-294" src="img/bkg/294.jpg" class="slika-ozadje">
+<img id="ozadje-293" src="img/bkg/293.jpg" class="slika-ozadje">
+<img id="ozadje-292" src="img/bkg/292.jpg" class="slika-ozadje">
+<img id="ozadje-291" src="img/bkg/291.jpg" class="slika-ozadje">
+<img id="ozadje-290" src="img/bkg/290.jpg" class="slika-ozadje">
+<img id="ozadje-289" src="img/bkg/289.jpg" class="slika-ozadje">
+<img id="ozadje-288" src="img/bkg/288.jpg" class="slika-ozadje">
+<img id="ozadje-287" src="img/bkg/287.jpg" class="slika-ozadje">
+<img id="ozadje-286" src="img/bkg/286.jpg" class="slika-ozadje">
+<img id="ozadje-285" src="img/bkg/285.jpg" class="slika-ozadje">
+<img id="ozadje-284" src="img/bkg/284.jpg" class="slika-ozadje">
+<img id="ozadje-283" src="img/bkg/283.jpg" class="slika-ozadje">
+<img id="ozadje-282" src="img/bkg/282.jpg" class="slika-ozadje">
+<img id="ozadje-281" src="img/bkg/281.jpg" class="slika-ozadje">
+<img id="ozadje-280" src="img/bkg/280.jpg" class="slika-ozadje">
+<img id="ozadje-279" src="img/bkg/279.jpg" class="slika-ozadje">
+<img id="ozadje-278" src="img/bkg/278.jpg" class="slika-ozadje">
+<img id="ozadje-277" src="img/bkg/277.jpg" class="slika-ozadje">
+<img id="ozadje-276" src="img/bkg/276.jpg" class="slika-ozadje">
+<img id="ozadje-275" src="img/bkg/275.jpg" class="slika-ozadje">
+<img id="ozadje-274" src="img/bkg/274.jpg" class="slika-ozadje">
+<img id="ozadje-273" src="img/bkg/273.jpg" class="slika-ozadje">
+<img id="ozadje-272" src="img/bkg/272.jpg" class="slika-ozadje">
+<img id="ozadje-271" src="img/bkg/271.jpg" class="slika-ozadje">
+<img id="ozadje-270" src="img/bkg/270.jpg" class="slika-ozadje">
+<img id="ozadje-269" src="img/bkg/269.jpg" class="slika-ozadje">
+<img id="ozadje-268" src="img/bkg/268.jpg" class="slika-ozadje">
+<img id="ozadje-267" src="img/bkg/267.jpg" class="slika-ozadje">
+<img id="ozadje-266" src="img/bkg/266.jpg" class="slika-ozadje">
+<img id="ozadje-265" src="img/bkg/265.jpg" class="slika-ozadje">
+<img id="ozadje-264" src="img/bkg/264.jpg" class="slika-ozadje">
+<img id="ozadje-263" src="img/bkg/263.jpg" class="slika-ozadje">
+<img id="ozadje-262" src="img/bkg/262.jpg" class="slika-ozadje">
+<img id="ozadje-261" src="img/bkg/261.jpg" class="slika-ozadje">
+<img id="ozadje-260" src="img/bkg/260.jpg" class="slika-ozadje">
+<img id="ozadje-259" src="img/bkg/259.jpg" class="slika-ozadje">
+<img id="ozadje-258" src="img/bkg/258.jpg" class="slika-ozadje">
+<img id="ozadje-257" src="img/bkg/257.jpg" class="slika-ozadje">
+<img id="ozadje-256" src="img/bkg/256.jpg" class="slika-ozadje">
+<img id="ozadje-255" src="img/bkg/255.jpg" class="slika-ozadje">
+<img id="ozadje-254" src="img/bkg/254.jpg" class="slika-ozadje">
+<img id="ozadje-253" src="img/bkg/253.jpg" class="slika-ozadje">
+<img id="ozadje-252" src="img/bkg/252.jpg" class="slika-ozadje">
+<img id="ozadje-251" src="img/bkg/251.jpg" class="slika-ozadje">
+<img id="ozadje-250" src="img/bkg/250.jpg" class="slika-ozadje">
+<img id="ozadje-249" src="img/bkg/249.jpg" class="slika-ozadje">
+<img id="ozadje-248" src="img/bkg/248.jpg" class="slika-ozadje">
+<img id="ozadje-247" src="img/bkg/247.jpg" class="slika-ozadje">
+<img id="ozadje-246" src="img/bkg/246.jpg" class="slika-ozadje">
+<img id="ozadje-245" src="img/bkg/245.jpg" class="slika-ozadje">
+<img id="ozadje-244" src="img/bkg/244.jpg" class="slika-ozadje">
+<img id="ozadje-243" src="img/bkg/243.jpg" class="slika-ozadje">
+<img id="ozadje-242" src="img/bkg/242.jpg" class="slika-ozadje">
+<img id="ozadje-241" src="img/bkg/241.jpg" class="slika-ozadje">
+<img id="ozadje-240" src="img/bkg/240.jpg" class="slika-ozadje">
+<img id="ozadje-239" src="img/bkg/239.jpg" class="slika-ozadje">
+<img id="ozadje-238" src="img/bkg/238.jpg" class="slika-ozadje">
+<img id="ozadje-237" src="img/bkg/237.jpg" class="slika-ozadje">
+<img id="ozadje-236" src="img/bkg/236.jpg" class="slika-ozadje">
+<img id="ozadje-235" src="img/bkg/235.jpg" class="slika-ozadje">
+<img id="ozadje-234" src="img/bkg/234.jpg" class="slika-ozadje">
+<img id="ozadje-233" src="img/bkg/233.jpg" class="slika-ozadje">
+<img id="ozadje-232" src="img/bkg/232.jpg" class="slika-ozadje">
+<img id="ozadje-231" src="img/bkg/231.jpg" class="slika-ozadje">
+<img id="ozadje-230" src="img/bkg/230.jpg" class="slika-ozadje">
+<img id="ozadje-229" src="img/bkg/229.jpg" class="slika-ozadje">
+<img id="ozadje-228" src="img/bkg/228.jpg" class="slika-ozadje">
+<img id="ozadje-227" src="img/bkg/227.jpg" class="slika-ozadje">
+<img id="ozadje-226" src="img/bkg/226.jpg" class="slika-ozadje">
+<img id="ozadje-225" src="img/bkg/225.jpg" class="slika-ozadje">
+<img id="ozadje-224" src="img/bkg/224.jpg" class="slika-ozadje">
+<img id="ozadje-223" src="img/bkg/223.jpg" class="slika-ozadje">
+<img id="ozadje-222" src="img/bkg/222.jpg" class="slika-ozadje">
+<img id="ozadje-221" src="img/bkg/221.jpg" class="slika-ozadje">
+<img id="ozadje-220" src="img/bkg/220.jpg" class="slika-ozadje">
+<img id="ozadje-219" src="img/bkg/219.jpg" class="slika-ozadje">
+<img id="ozadje-218" src="img/bkg/218.jpg" class="slika-ozadje">
+<img id="ozadje-217" src="img/bkg/217.jpg" class="slika-ozadje">
+<img id="ozadje-216" src="img/bkg/216.jpg" class="slika-ozadje">
+<img id="ozadje-215" src="img/bkg/215.jpg" class="slika-ozadje">
+<img id="ozadje-214" src="img/bkg/214.jpg" class="slika-ozadje">
+<img id="ozadje-213" src="img/bkg/213.jpg" class="slika-ozadje">
+<img id="ozadje-212" src="img/bkg/212.jpg" class="slika-ozadje">
+<img id="ozadje-211" src="img/bkg/211.jpg" class="slika-ozadje">
+<img id="ozadje-210" src="img/bkg/210.jpg" class="slika-ozadje">
+<img id="ozadje-209" src="img/bkg/209.jpg" class="slika-ozadje">
+<img id="ozadje-208" src="img/bkg/208.jpg" class="slika-ozadje">
+<img id="ozadje-207" src="img/bkg/207.jpg" class="slika-ozadje">
+<img id="ozadje-206" src="img/bkg/206.jpg" class="slika-ozadje">
+<img id="ozadje-205" src="img/bkg/205.jpg" class="slika-ozadje">
+<img id="ozadje-204" src="img/bkg/204.jpg" class="slika-ozadje">
+<img id="ozadje-203" src="img/bkg/203.jpg" class="slika-ozadje">
+<img id="ozadje-202" src="img/bkg/202.jpg" class="slika-ozadje">
+<img id="ozadje-201" src="img/bkg/201.jpg" class="slika-ozadje">
+<img id="ozadje-200" src="img/bkg/200.jpg" class="slika-ozadje">
+<img id="ozadje-199" src="img/bkg/199.jpg" class="slika-ozadje">
+<img id="ozadje-198" src="img/bkg/198.jpg" class="slika-ozadje">
+<img id="ozadje-197" src="img/bkg/197.jpg" class="slika-ozadje">
+<img id="ozadje-196" src="img/bkg/196.jpg" class="slika-ozadje">
+<img id="ozadje-195" src="img/bkg/195.jpg" class="slika-ozadje">
+<img id="ozadje-194" src="img/bkg/194.jpg" class="slika-ozadje">
+<img id="ozadje-193" src="img/bkg/193.jpg" class="slika-ozadje">
+<img id="ozadje-192" src="img/bkg/192.jpg" class="slika-ozadje">
+<img id="ozadje-191" src="img/bkg/191.jpg" class="slika-ozadje">
+<img id="ozadje-190" src="img/bkg/190.jpg" class="slika-ozadje">
+<img id="ozadje-189" src="img/bkg/189.jpg" class="slika-ozadje">
+<img id="ozadje-188" src="img/bkg/188.jpg" class="slika-ozadje">
+<img id="ozadje-187" src="img/bkg/187.jpg" class="slika-ozadje">
+<img id="ozadje-186" src="img/bkg/186.jpg" class="slika-ozadje">
+<img id="ozadje-185" src="img/bkg/185.jpg" class="slika-ozadje">
+<img id="ozadje-184" src="img/bkg/184.jpg" class="slika-ozadje">
+<img id="ozadje-183" src="img/bkg/183.jpg" class="slika-ozadje">
+<img id="ozadje-182" src="img/bkg/182.jpg" class="slika-ozadje">
+<img id="ozadje-181" src="img/bkg/181.jpg" class="slika-ozadje">
+<img id="ozadje-180" src="img/bkg/180.jpg" class="slika-ozadje">
+<img id="ozadje-179" src="img/bkg/179.jpg" class="slika-ozadje">
+<img id="ozadje-178" src="img/bkg/178.jpg" class="slika-ozadje">
+<img id="ozadje-177" src="img/bkg/177.jpg" class="slika-ozadje">
+<img id="ozadje-176" src="img/bkg/176.jpg" class="slika-ozadje">
+<img id="ozadje-175" src="img/bkg/175.jpg" class="slika-ozadje">
+<img id="ozadje-174" src="img/bkg/174.jpg" class="slika-ozadje">
+<img id="ozadje-173" src="img/bkg/173.jpg" class="slika-ozadje">
+<img id="ozadje-172" src="img/bkg/172.jpg" class="slika-ozadje">
+<img id="ozadje-171" src="img/bkg/171.jpg" class="slika-ozadje">
+<img id="ozadje-170" src="img/bkg/170.jpg" class="slika-ozadje">
+<img id="ozadje-169" src="img/bkg/169.jpg" class="slika-ozadje">
+<img id="ozadje-168" src="img/bkg/168.jpg" class="slika-ozadje">
+<img id="ozadje-167" src="img/bkg/167.jpg" class="slika-ozadje">
+<img id="ozadje-166" src="img/bkg/166.jpg" class="slika-ozadje">
+<img id="ozadje-165" src="img/bkg/165.jpg" class="slika-ozadje">
+<img id="ozadje-164" src="img/bkg/164.jpg" class="slika-ozadje">
+<img id="ozadje-163" src="img/bkg/163.jpg" class="slika-ozadje">
+<img id="ozadje-162" src="img/bkg/162.jpg" class="slika-ozadje">
+<img id="ozadje-161" src="img/bkg/161.jpg" class="slika-ozadje">
+<img id="ozadje-160" src="img/bkg/160.jpg" class="slika-ozadje">
+<img id="ozadje-159" src="img/bkg/159.jpg" class="slika-ozadje">
+<img id="ozadje-158" src="img/bkg/158.jpg" class="slika-ozadje">
+<img id="ozadje-157" src="img/bkg/157.jpg" class="slika-ozadje">
+<img id="ozadje-156" src="img/bkg/156.jpg" class="slika-ozadje">
+<img id="ozadje-155" src="img/bkg/155.jpg" class="slika-ozadje">
+<img id="ozadje-154" src="img/bkg/154.jpg" class="slika-ozadje">
+<img id="ozadje-153" src="img/bkg/153.jpg" class="slika-ozadje">
+<img id="ozadje-152" src="img/bkg/152.jpg" class="slika-ozadje">
+<img id="ozadje-151" src="img/bkg/151.jpg" class="slika-ozadje">
+<img id="ozadje-150" src="img/bkg/150.jpg" class="slika-ozadje">
+<img id="ozadje-149" src="img/bkg/149.jpg" class="slika-ozadje">
+<img id="ozadje-148" src="img/bkg/148.jpg" class="slika-ozadje">
+<img id="ozadje-147" src="img/bkg/147.jpg" class="slika-ozadje">
+<img id="ozadje-146" src="img/bkg/146.jpg" class="slika-ozadje">
+<img id="ozadje-145" src="img/bkg/145.jpg" class="slika-ozadje">
+<img id="ozadje-144" src="img/bkg/144.jpg" class="slika-ozadje">
+<img id="ozadje-143" src="img/bkg/143.jpg" class="slika-ozadje">
+<img id="ozadje-142" src="img/bkg/142.jpg" class="slika-ozadje">
+<img id="ozadje-141" src="img/bkg/141.jpg" class="slika-ozadje">
+<img id="ozadje-140" src="img/bkg/140.jpg" class="slika-ozadje">
+<img id="ozadje-139" src="img/bkg/139.jpg" class="slika-ozadje">
+<img id="ozadje-138" src="img/bkg/138.jpg" class="slika-ozadje">
+<img id="ozadje-137" src="img/bkg/137.jpg" class="slika-ozadje">
+<img id="ozadje-136" src="img/bkg/136.jpg" class="slika-ozadje">
+<img id="ozadje-135" src="img/bkg/135.jpg" class="slika-ozadje">
+<img id="ozadje-134" src="img/bkg/134.jpg" class="slika-ozadje">
+<img id="ozadje-133" src="img/bkg/133.jpg" class="slika-ozadje">
+<img id="ozadje-132" src="img/bkg/132.jpg" class="slika-ozadje">
+<img id="ozadje-131" src="img/bkg/131.jpg" class="slika-ozadje">
+<img id="ozadje-130" src="img/bkg/130.jpg" class="slika-ozadje">
+<img id="ozadje-129" src="img/bkg/129.jpg" class="slika-ozadje">
+<img id="ozadje-128" src="img/bkg/128.jpg" class="slika-ozadje">
+<img id="ozadje-127" src="img/bkg/127.jpg" class="slika-ozadje">
+<img id="ozadje-126" src="img/bkg/126.jpg" class="slika-ozadje">
+<img id="ozadje-125" src="img/bkg/125.jpg" class="slika-ozadje">
+<img id="ozadje-124" src="img/bkg/124.jpg" class="slika-ozadje">
+<img id="ozadje-123" src="img/bkg/123.jpg" class="slika-ozadje">
+<img id="ozadje-122" src="img/bkg/122.jpg" class="slika-ozadje">
+<img id="ozadje-121" src="img/bkg/121.jpg" class="slika-ozadje">
+<img id="ozadje-120" src="img/bkg/120.jpg" class="slika-ozadje">
+<img id="ozadje-119" src="img/bkg/119.jpg" class="slika-ozadje">
+<img id="ozadje-118" src="img/bkg/118.jpg" class="slika-ozadje">
+<img id="ozadje-117" src="img/bkg/117.jpg" class="slika-ozadje">
+<img id="ozadje-116" src="img/bkg/116.jpg" class="slika-ozadje">
+<img id="ozadje-115" src="img/bkg/115.jpg" class="slika-ozadje">
+<img id="ozadje-114" src="img/bkg/114.jpg" class="slika-ozadje">
+<img id="ozadje-113" src="img/bkg/113.jpg" class="slika-ozadje">
+<img id="ozadje-112" src="img/bkg/112.jpg" class="slika-ozadje">
+<img id="ozadje-111" src="img/bkg/111.jpg" class="slika-ozadje">
+<img id="ozadje-110" src="img/bkg/110.jpg" class="slika-ozadje">
+<img id="ozadje-109" src="img/bkg/109.jpg" class="slika-ozadje">
+<img id="ozadje-108" src="img/bkg/108.jpg" class="slika-ozadje">
+<img id="ozadje-107" src="img/bkg/107.jpg" class="slika-ozadje">
+<img id="ozadje-106" src="img/bkg/106.jpg" class="slika-ozadje">
+<img id="ozadje-105" src="img/bkg/105.jpg" class="slika-ozadje">
+<img id="ozadje-104" src="img/bkg/104.jpg" class="slika-ozadje">
+<img id="ozadje-103" src="img/bkg/103.jpg" class="slika-ozadje">
+<img id="ozadje-102" src="img/bkg/102.jpg" class="slika-ozadje">
+<img id="ozadje-101" src="img/bkg/101.jpg" class="slika-ozadje">
+<img id="ozadje-100" src="img/bkg/100.jpg" class="slika-ozadje">
+<img id="ozadje-99" src="img/bkg/99.jpg" class="slika-ozadje">
+<img id="ozadje-98" src="img/bkg/98.jpg" class="slika-ozadje">
+<img id="ozadje-97" src="img/bkg/97.jpg" class="slika-ozadje">
+<img id="ozadje-96" src="img/bkg/96.jpg" class="slika-ozadje">
+<img id="ozadje-95" src="img/bkg/95.jpg" class="slika-ozadje">
+<img id="ozadje-94" src="img/bkg/94.jpg" class="slika-ozadje">
+<img id="ozadje-93" src="img/bkg/93.jpg" class="slika-ozadje">
+<img id="ozadje-92" src="img/bkg/92.jpg" class="slika-ozadje">
+<img id="ozadje-91" src="img/bkg/91.jpg" class="slika-ozadje">
+<img id="ozadje-90" src="img/bkg/90.jpg" class="slika-ozadje">
+<img id="ozadje-89" src="img/bkg/89.jpg" class="slika-ozadje">
+<img id="ozadje-88" src="img/bkg/88.jpg" class="slika-ozadje">
+<img id="ozadje-87" src="img/bkg/87.jpg" class="slika-ozadje">
+<img id="ozadje-86" src="img/bkg/86.jpg" class="slika-ozadje">
+<img id="ozadje-85" src="img/bkg/85.jpg" class="slika-ozadje">
+<img id="ozadje-84" src="img/bkg/84.jpg" class="slika-ozadje">
+<img id="ozadje-83" src="img/bkg/83.jpg" class="slika-ozadje">
+<img id="ozadje-82" src="img/bkg/82.jpg" class="slika-ozadje">
+<img id="ozadje-81" src="img/bkg/81.jpg" class="slika-ozadje">
+<img id="ozadje-80" src="img/bkg/80.jpg" class="slika-ozadje">
+<img id="ozadje-79" src="img/bkg/79.jpg" class="slika-ozadje">
+<img id="ozadje-78" src="img/bkg/78.jpg" class="slika-ozadje">
+<img id="ozadje-77" src="img/bkg/77.jpg" class="slika-ozadje">
+<img id="ozadje-76" src="img/bkg/76.jpg" class="slika-ozadje">
+<img id="ozadje-75" src="img/bkg/75.jpg" class="slika-ozadje">
+<img id="ozadje-74" src="img/bkg/74.jpg" class="slika-ozadje">
+<img id="ozadje-73" src="img/bkg/73.jpg" class="slika-ozadje">
+<img id="ozadje-72" src="img/bkg/72.jpg" class="slika-ozadje">
+<img id="ozadje-71" src="img/bkg/71.jpg" class="slika-ozadje">
+<img id="ozadje-70" src="img/bkg/70.jpg" class="slika-ozadje">
+<img id="ozadje-69" src="img/bkg/69.jpg" class="slika-ozadje">
+<img id="ozadje-68" src="img/bkg/68.jpg" class="slika-ozadje">
+<img id="ozadje-67" src="img/bkg/67.jpg" class="slika-ozadje">
+<img id="ozadje-66" src="img/bkg/66.jpg" class="slika-ozadje">
+<img id="ozadje-65" src="img/bkg/65.jpg" class="slika-ozadje">
+<img id="ozadje-64" src="img/bkg/64.jpg" class="slika-ozadje">
+<img id="ozadje-63" src="img/bkg/63.jpg" class="slika-ozadje">
+<img id="ozadje-62" src="img/bkg/62.jpg" class="slika-ozadje">
+<img id="ozadje-61" src="img/bkg/61.jpg" class="slika-ozadje">
+<img id="ozadje-60" src="img/bkg/60.jpg" class="slika-ozadje">
+<img id="ozadje-59" src="img/bkg/59.jpg" class="slika-ozadje">
+<img id="ozadje-58" src="img/bkg/58.jpg" class="slika-ozadje">
+<img id="ozadje-57" src="img/bkg/57.jpg" class="slika-ozadje">
+<img id="ozadje-56" src="img/bkg/56.jpg" class="slika-ozadje">
+<img id="ozadje-55" src="img/bkg/55.jpg" class="slika-ozadje">
+<img id="ozadje-54" src="img/bkg/54.jpg" class="slika-ozadje">
+<img id="ozadje-53" src="img/bkg/53.jpg" class="slika-ozadje">
+<img id="ozadje-52" src="img/bkg/52.jpg" class="slika-ozadje">
+<img id="ozadje-51" src="img/bkg/51.jpg" class="slika-ozadje">
+<img id="ozadje-50" src="img/bkg/50.jpg" class="slika-ozadje">
+<img id="ozadje-49" src="img/bkg/49.jpg" class="slika-ozadje">
+<img id="ozadje-48" src="img/bkg/48.jpg" class="slika-ozadje">
+<img id="ozadje-47" src="img/bkg/47.jpg" class="slika-ozadje">
+<img id="ozadje-46" src="img/bkg/46.jpg" class="slika-ozadje">
+<img id="ozadje-45" src="img/bkg/45.jpg" class="slika-ozadje">
+<img id="ozadje-44" src="img/bkg/44.jpg" class="slika-ozadje">
+<img id="ozadje-43" src="img/bkg/43.jpg" class="slika-ozadje">
+<img id="ozadje-42" src="img/bkg/42.jpg" class="slika-ozadje">
+<img id="ozadje-41" src="img/bkg/41.jpg" class="slika-ozadje">
+<img id="ozadje-40" src="img/bkg/40.jpg" class="slika-ozadje">
+<img id="ozadje-39" src="img/bkg/39.jpg" class="slika-ozadje">
+<img id="ozadje-38" src="img/bkg/38.jpg" class="slika-ozadje">
+<img id="ozadje-37" src="img/bkg/37.jpg" class="slika-ozadje">
+<img id="ozadje-36" src="img/bkg/36.jpg" class="slika-ozadje">
+<img id="ozadje-35" src="img/bkg/35.jpg" class="slika-ozadje">
+<img id="ozadje-34" src="img/bkg/34.jpg" class="slika-ozadje">
+<img id="ozadje-33" src="img/bkg/33.jpg" class="slika-ozadje">
+<img id="ozadje-32" src="img/bkg/32.jpg" class="slika-ozadje">
+<img id="ozadje-31" src="img/bkg/31.jpg" class="slika-ozadje">
+<img id="ozadje-30" src="img/bkg/30.jpg" class="slika-ozadje">
+<img id="ozadje-29" src="img/bkg/29.jpg" class="slika-ozadje">
+<img id="ozadje-28" src="img/bkg/28.jpg" class="slika-ozadje">
+<img id="ozadje-27" src="img/bkg/27.jpg" class="slika-ozadje">
+<img id="ozadje-26" src="img/bkg/26.jpg" class="slika-ozadje">
+<img id="ozadje-25" src="img/bkg/25.jpg" class="slika-ozadje">
+<img id="ozadje-24" src="img/bkg/24.jpg" class="slika-ozadje">
+<img id="ozadje-23" src="img/bkg/23.jpg" class="slika-ozadje">
+<img id="ozadje-22" src="img/bkg/22.jpg" class="slika-ozadje">
+<img id="ozadje-21" src="img/bkg/21.jpg" class="slika-ozadje">
+<img id="ozadje-20" src="img/bkg/20.jpg" class="slika-ozadje">
+<img id="ozadje-19" src="img/bkg/19.jpg" class="slika-ozadje">
+<img id="ozadje-18" src="img/bkg/18.jpg" class="slika-ozadje">
+<img id="ozadje-17" src="img/bkg/17.jpg" class="slika-ozadje">
+<img id="ozadje-16" src="img/bkg/16.jpg" class="slika-ozadje">
+<img id="ozadje-15" src="img/bkg/15.jpg" class="slika-ozadje">
+<img id="ozadje-14" src="img/bkg/14.jpg" class="slika-ozadje">
+<img id="ozadje-13" src="img/bkg/13.jpg" class="slika-ozadje">
+<img id="ozadje-12" src="img/bkg/12.jpg" class="slika-ozadje">
+<img id="ozadje-11" src="img/bkg/11.jpg" class="slika-ozadje">
+<img id="ozadje-10" src="img/bkg/10.jpg" class="slika-ozadje">
+<img id="ozadje-9" src="img/bkg/9.jpg" class="slika-ozadje">
+<img id="ozadje-8" src="img/bkg/8.jpg" class="slika-ozadje">
+<img id="ozadje-7" src="img/bkg/7.jpg" class="slika-ozadje">
+<img id="ozadje-6" src="img/bkg/6.jpg" class="slika-ozadje">
+<img id="ozadje-5" src="img/bkg/5.jpg" class="slika-ozadje">
+<img id="ozadje-4" src="img/bkg/4.jpg" class="slika-ozadje">
+<img id="ozadje-3" src="img/bkg/3.jpg" class="slika-ozadje">
+<img id="ozadje-2" src="img/bkg/2.jpg" class="slika-ozadje">
+<img id="ozadje-1" src="img/bkg/1.jpg" class="slika-ozadje">
+
+
+<div id="logo">
+  <img src="img/logo/Layer0.png" style="width: 242px;">
+
+  <img id="bottle-1" src="img/logo/bottle.png" style="width: 39px; left: 188px; top: 24px;">
+  <img id="bottle-2" src="img/logo/bottle.png" style="width: 39px; left: 158px; top: 21px;">
+  <img id="bottle-3" src="img/logo/bottle.png" style="width: 39px; left: 129px; top: 18px;">
+  <img id="bottle-4" src="img/logo/bottle.png" style="width: 39px; left: 99px; top: 15px;">
+  <img id="bottle-5" src="img/logo/bottle.png" style="width: 39px; left: 68px; top: 12px;">
+  <img id="bottle-6" src="img/logo/bottle.png" style="width: 39px; left: 175px; top: 30px;">
+  <img id="bottle-7" src="img/logo/bottle.png" style="width: 39px; left: 145px; top: 27px;">
+  <img id="bottle-8" src="img/logo/bottle.png" style="width: 39px; left: 114px; top: 24px;">
+  <img id="bottle-9" src="img/logo/bottle.png" style="width: 39px; left: 85px; top: 21px;">
+  <img id="bottle-10" src="img/logo/bottle.png" style="width: 39px; left: 53px; top: 18px;">
+  <img id="bottle-11" src="img/logo/bottle.png" style="width: 39px; left: 162px; top: 37px;">
+  <img id="bottle-12" src="img/logo/bottle.png" style="width: 39px; left: 130px; top: 32px;">
+  <img id="bottle-13" src="img/logo/bottle.png" style="width: 39px; left: 100px; top: 27px;">
+  <img id="bottle-14" src="img/logo/bottle.png" style="width: 39px; left: 68px; top: 27px;">
+  <img id="bottle-15" src="img/logo/bottle.png" style="width: 39px; left: 36px; top: 23px;">
+  <img id="bottle-16" src="img/logo/bottle.png" style="width: 39px; left: 21px; top: 27px;">
+  <img id="bottle-17" src="img/logo/bottle.png" style="width: 39px; left: 55px; top: 31px;">
+  <img id="bottle-18" src="img/logo/bottle.png" style="width: 39px; left: 87px; top: 37px;">
+  <img id="bottle-19" src="img/logo/bottle.png" style="width: 39px; left: 118px; top: 41px;">
+  <img id="bottle-20" src="img/logo/bottle.png" style="width: 39px; left: 153px; top: 45px;">  
+
+  <img src="img/logo/Layer1.png" style="width: 242px;">
+</div>
+
+<script>
+window.onbeforeunload = function(){ window.scrollTo(0,0); }
+
+$(function() {
+  setupSlides(4);
+  setupBackgroundScroll();
+});
+
+function setupSlides(numberOfSlides) {
+
+  function slideUp(selector) {
+    return new TweenMax.from(selector, 2, {
+      y: $(window).height(),
+      ease: Power2.easeInOut
+    });
+  }
+
+  function moveUp(selector) {
+    return new TweenMax.to(selector, 2, {
+      y: "-="+$(window).height(),
+      ease: Power2.easeInOut
+    });
+  }
+
+  function slideDown(selector) {
+    return new TweenMax.from(selector, 2, {
+      y: -$(window).height(),
+      ease: Power2.easeInOut
+    });
+  }
+
+  function moveDown(selector) {
+    return new TweenMax.to(selector, 2, {
+      y: "+="+$(window).height(),
+      ease: Power2.easeInOut
+    });
+  }
+
+  // init controller
+  var controller = new ScrollMagic.Controller();
+
+  for (var i=1; i<=numberOfSlides; i++) {
+
+    var timeline = new TimelineMax();
+    timeline.add(slideUp('#pivo-'+i), 0);
+    timeline.add(slideDown('#opis-'+i), 0)
+    if (i > 1) {
+      timeline.add(moveUp('#pivo-'+(i-1)), 0);
+      timeline.add(moveDown('#opis-'+(i-1)), 0);
+    }
+
+    new ScrollMagic.Scene({
+      offset: 1000*i	// px
+    })
+    .setTween(timeline)
+    .addIndicators()
+    .addTo(controller);
+
+  }
+
+  var timeline = new TimelineMax();
+  for (var i=1; i<=20; i++) {
+    timeline.add(
+      new TweenMax.from('#bottle-'+i, 1, {
+        y: -200,
+        ease: Power2.easeInOut
+      })
+    );
+  }
+  new ScrollMagic.Scene({
+      duration: 800, // px
+      offset: 100	// px
+    })
+    .setTween(timeline)
+    .addIndicators()
+    .addTo(controller);
+
+}
+
+function setupBackgroundScroll() {
+  var frameNumber = 0;
+  /* var previousFrameNumber = 1;
+  var previousFrameIMG = document.getElementById('ozadje-1');
+  var prevPreviousFrameIMG = document.getElementById('ozadje-1'); */
+
+  // Use requestAnimationFrame for smooth playback
+  function scrollPlay(){  
+    frameNumber  = Math.floor(window.pageYOffset/100)+1;
+    document.getElementById('view-frame').style.backgroundImage = "url('img/bkg/"+frameNumber+".jpg')";
+
+    /* if (frameNumber != previousFrameNumber) {
+      var frameIMG = document.getElementById('ozadje-'+frameNumber);
+      previousFrameIMG.style.zIndex = '-2';
+      frameIMG.style.zIndex = '-1';
+      prevPreviousFrameIMG.style.zIndex = '-999';
+      prevPreviousFrameIMG = previousFrameIMG;
+      previousFrameIMG = frameIMG;
+      previousFrameNumber = frameNumber;
+    } */
+    //window.requestAnimationFrame(scrollPlay);
+  }
+
+  setInterval(function(){ scrollPlay(); }, 50);
+
+  //window.requestAnimationFrame(scrollPlay);
+}
+</script>
+
+</body>
+</html> 

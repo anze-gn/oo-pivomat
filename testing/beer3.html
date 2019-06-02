@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Beer 2</title>
+<style>
+#set-height {
+  display: block;
+}
+#v0, #v1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+p font-family helvetica {
+  font-size: 24px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="set-height"></div>
+<p id="time"></p>
+<video id="v1" tabindex="0" autobuffer="autobuffer" preload="preload"><source src="beerReversed.webm"></source></video>
+<video id="v0" tabindex="0" autobuffer="autobuffer" preload="preload"><source src="beerForward.webm"></source></video>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  var playingStatus = 0;
+var frameNumber = 0, // start video at frame 0
+    // lower numbers = faster playback
+    playbackConst = 500, 
+    // get page height from video duration
+    setHeight = document.getElementById("set-height"), 
+    // select video element         
+    vidForward = document.getElementById('v0'); 
+    vidBackwards = document.getElementById('v1'); 
+    vidForward.loop = false;
+    vidBackwards.loop = false;
+    // var vid = $('#v0')[0]; // jquery option
+
+// dynamically set the page height according to video length
+vidForward.addEventListener('loadedmetadata', function() {
+  setHeight.style.height = Math.floor(vidForward.duration) * playbackConst + "px";
+});
+
+
+// Use requestAnimationFrame for smooth playback
+function scrollPlay(){  
+  var frameNumber  = window.pageYOffset/playbackConst;
+  var currentTime = (playingStatus == -1) ? vidBackwards.duration - vidBackwards.currentTime : vidForward.currentTime;
+  if (currentTime < frameNumber-1) {
+    playForward();
+  } else if (currentTime > frameNumber+1) {
+    playBackwards();
+  } else {
+    pause();
+  }
+  window.requestAnimationFrame(scrollPlay);
+}
+
+function playBackwards() {
+  if (playingStatus == -1) return;
+
+  playingStatus = -1;
+  console.log("playBackwards");
+
+  vidForward.pause();
+  vidBackwards.currentTime = vidForward.duration - vidForward.currentTime;
+  vidBackwards.play();
+  vidForward.style.zIndex = -99;
+  vidBackwards.style.zIndex = -1;
+}
+
+function playForward() {
+  if (playingStatus == 1) return;
+
+  playingStatus = 1;
+  console.log("playForward");
+
+  vidBackwards.pause();
+  vidForward.currentTime = vidBackwards.duration - vidBackwards.currentTime;
+  vidForward.play();
+  vidForward.style.zIndex = -1;
+  vidBackwards.style.zIndex = -99;
+}
+
+function pause() {
+  if (playingStatus == 0) return;
+
+  playingStatus = 0;
+
+  vidForward.pause();
+  vidBackwards.pause();
+  console.log("pause");
+
+  if (playingStatus == -1) {
+    vidForward.currentTime = vidBackwards.duration - vidBackwards.currentTime;
+  } else {
+    vidBackwards.currentTime = vidForward.duration - vidForward.currentTime;
+  }
+}
+
+window.requestAnimationFrame(scrollPlay);
+});
+</script>
+
+</body>
+</html> 
