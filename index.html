@@ -477,6 +477,8 @@ function setupSlides(numberOfSlides) {
   function fromBox(element, i) {
     var endPos = $(element).offset();
     var endHeight = $(element).height();
+    var imgSrc = $(element).attr("src");
+    $(element).attr("src", "img/logo/bottle.png");
 
     var startPos = {
       top: Math.round(bottlePositions[i].y * bottlePositionFactor) + logoOffset.top,
@@ -507,7 +509,8 @@ function setupSlides(numberOfSlides) {
       height: endHeight,
       marginLeft: "auto",
       marginRight: "auto",
-      ease: Power2.easeInOut
+      ease: Power2.easeInOut,
+      attr: {src: imgSrc}
     });
   }
 
