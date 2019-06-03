@@ -3,6 +3,10 @@
 <head>
 <title>Pivomat</title>
 <style>
+body {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
 #set-height {
   display: block;
   height: 21000px;
@@ -48,7 +52,7 @@ img.pivo {
 }
 </style>
 
-
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -369,246 +373,279 @@ img.pivo {
 
 
 <div id="view-frame">
+  <div class="container h-100" style="position: relative;">
 
-  <div class="container h-100">
-  <div class="row h-100">
+    <div class="w-100 h-100 position-absolute" id="content-container" style="visibility: hidden">
+    <div class="row h-100">
 
-  <div class="col-6 h-100">
-    <img class="logo" src="img/logo/Layer0.png">
-    <img class="logo" src="img/logo/Layer1.png" style="z-index: 1">
+    <div class="col-6 h-100">
+      <img class="logo" src="img/logo/Layer0.png">
+      <img class="logo" src="img/logo/Layer1.png" style="z-index: 1">
 
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-1" src="img/piva2/pale_ale_mali_grad.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-1" src="img/piva2/pale_ale_mali_grad.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-2" src="img/piva2/pale_ale_hops.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-2" src="img/piva2/pale_ale_hops.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-3" src="img/piva2/summer_snow.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-3" src="img/piva2/summer_snow.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-4" src="img/piva2/gallus.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-4" src="img/piva2/gallus.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-5" src="img/piva2/nolan.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-5" src="img/piva2/nolan.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-6" src="img/piva2/your_bitter_ex.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-6" src="img/piva2/your_bitter_ex.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-7" src="img/piva2/oatmeal_stout.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-7" src="img/piva2/oatmeal_stout.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-8" src="img/piva2/roadside_picnic.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-8" src="img/piva2/roadside_picnic.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-9" src="img/piva2/noordung.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-9" src="img/piva2/noordung.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-10" src="img/piva2/russell.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-10" src="img/piva2/russell.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-11" src="img/piva2/india_pale_ale_mali_grad.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-11" src="img/piva2/india_pale_ale_mali_grad.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-12" src="img/piva2/porter.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-12" src="img/piva2/porter.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-13" src="img/piva2/general_maister.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-13" src="img/piva2/general_maister.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-14" src="img/piva2/your_obession.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-14" src="img/piva2/your_obession.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-15" src="img/piva2/tropical_wheat.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-15" src="img/piva2/tropical_wheat.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-16" src="img/piva2/vega.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-16" src="img/piva2/vega.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-17" src="img/piva2/black_magic_woman.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-17" src="img/piva2/black_magic_woman.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-18" src="img/piva2/kri_pomaran_e.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-18" src="img/piva2/kri_pomaran_e.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-19" src="img/piva2/rusjan.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-19" src="img/piva2/rusjan.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-20" src="img/piva2/illusion.png" class="pivo d-block">
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100 h-50">
+          <img id="pivo-20" src="img/piva2/illusion.png" class="pivo d-block">
+        </div>
       </div>
-    </div>
-    
+      
 
-  </div>
-
-  <div class="col-6 h-100">
-    
-
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-1" style="background-color: #bbbdaf; padding: 50px;border-radius: 50px 0px 50px 0px;">
-        <h1>Mali Grad: <b>Pale Ale</b></h1>
-        <p>Jantarno-zlato barvo hmeljnega napitka pokriva velika in obstojna pena bele barve. Nežna sadna aroma s pridihom karamele in visoka stopnja mehurčkov daje zelo okusnemu in pitnemu pivu prijetno svežino in osvežilen občutek.</p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-2" style="background-color: #20b327; padding: 50px;border-radius: 0px 50px 0px 50px;">
-        <h1>Hopsbrew: <b>Pale Ale</b></h1>
-        <p>Pale Ale pivo izdelano na ameriški način. Motna oranžno-jantarna barva, na kateri kraljuje zelo obstojna bela kremasta pena, skriva v sebi aromo agrumov in sveže trave. Gre za izjemno pitno in osvežilno pivo.</p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-3" style="background-color: #dcde25; padding: 50px;border-radius: 50px 0px 50px 0px;">
-        <h1>Barut: <b>Summer Snow</b></h1>
-        <p>Barutov Summer Snow se izraža z nežnimi kiselkastami notami vina, belega grozdja in rahlim pridihom začimb. Okusno, lahkotno in zelo osvežilno.</p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-4" style="background-color: #eeefea; padding: 50px;border-radius: 0px 50px 0px 50px;">
-        <h1>Maister Brewery: <b>Gallus</b></h1>
-        <p>Osvežilni Pilsner z značilno mehurčkasto zlato barvo in belo peno, ki dokaj kmalu izzveni. Nežna travnata nota hmelja, prijetna grenkoba in komaj zaznavna sladkasta aroma vodijo v nadvse okusno in pitno pivo.</p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-5" style="background-color: #45496c; padding: 50px;border-radius: 50px 0px 50px 0px;color: white">
-        <h1>Mister: <b>Nolan</b></h1>
-        <p>MISTER Nolan je svetlo in lahko pivo citrusnih arom varjen s popolno kombinacijo najbolj aromatičnih ameriških hmeljev ter z dodatki pšeničnega sladu, ki prispeva k svilnatemu telesu.</p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-6" style="background-color: #cbcbc9; padding: 50px;border-radius: 0px 50px 0px 50px;">
-        <h1>Mali Grad: <b>Your Bitter Ex</b></h1>
-        <p>Motna jantarna barva je pokrita z manjšo umazano belo peno, aroma pa je sladkasta z izrazitejšo zeliščo noto, kar na koncu lepo zaokroži v lahko in pitno pivo.</p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-7" style="background-color: #31322c; padding: 50px;border-radius: 50px 0px 50px 0px;color: white">
-        <h1>Hopsbrew: <b>Outmeal stout</b></h1>
-        <p>Izjemno polno pivo stila Stout je popolnoma črne barve, vrh pa krasi velika pena krem barve. Aroma temne čokolade z dodatkom vanilje vodi v izjemno prijetno in pitno pivo.</p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-8" style="background-color: #953e34; padding: 50px;border-radius: 0px 50px 0px 50px;">
-        <h1>Barut: <b>Roadside Picnic</b></h1>
-        <p>Divji Pale Ale s čudovitim hmeljem Aurora in ščepecem sečuanskega popra, ki poudari sadnost. Suho, visoko pitno in harmonično Session pivo.</p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-9" style="background-color: #0c0b06; padding: 50px;border-radius: 50px 0px 50px 0px;color: white">
-        <h1>Maister Brewery: <b>Noordung</b></h1>
-        <p>V pivovarni Maister so dotično pivo poimenovali po Hermanu Potočniku Noordungu, svetovno priznanemu raketnemu inženirju in enemu izmed pionirjev vesoljskih poletov. Gosto in kremasto pivo abstraktne črne barve z veliko, obstojno peno odlikuje aroma temne čokolade, z dodanimi notami vanilje in pražene kave. Lahko pitno in zelo okusno.</p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-10" style="background-color: #414544; padding: 50px;border-radius: 0px 50px 0px 50px;color: white">
-        <h1>Mister: <b>Russel</b></h1>
-        <p>MISTER Russell je pivo stila IPA s 6% alkohola. Varjen je s slovenskim hmeljem, ki daje tropsko aromo ter karamelnimi in čokoladnimi sladovi, ki delajo Russlla za pravo sladico med pivi.</p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-11" style="background-color: #b6b6aa; padding: 50px;border-radius: 50px 0px 50px 0px;">
-        <h1>Mali Grad: <b>India Pale Ale</b></h1>
-        <p>IPA pivo z oranžno-zlato barvo, katerega krasi solidna in obstojna pena bež barve ima prijetno sadno aromo agrumov in grenivke. Okus tega IPA piva zaznamuje zelo konkretna grenkoba, kar bo zadovoljilo tudi bolj zahtevne ljubitelje piv stila IPA.</p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-12" style="background-color: #a55ae8; padding: 50px;border-radius: 0px 50px 0px 50px;">
-        <h1>Hopsbrew: <b>Porter</b></h1>
-        <p>Okusen porter s popolnoma črno barvo in kremasto peno bež barve se lahko pohvali z nežno aromo kave, čokolade ter lahkimi travnatimi notami hmelja.</p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-13" style="background-color: #e7e3e2; padding: 50px;border-radius: 50px 0px 50px 0px;">
-        <h1>Maister Brewery: <b>General Maister</b></h1>
-        <p>V prijetni sadni aromi okusnega IPA piva se prepletajo note agrumov in tropskega sadja, okus pa zaznamuje rahla hmeljna grenčica.</p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-14" style="background-color: #8d884e; padding: 50px;border-radius: 0px 50px 0px 50px;">
-        <h1>Mali Grad: <b>Your Obsession</b></h1>
-        <p>Pivo stila session IPA ima motno zlato barvo, pokriva pa ga obstojna, velika bela pena. Lahka sadna aroma z agrumi in tropskim sadjem ter nižjo stopnjo alkohola poskrbi za lahkotno in tako izjemno pitno pivo.</p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-15" style="background-color: #d1c936; padding: 50px;border-radius: 50px 0px 50px 0px;">
-        <h1>Hopsbrew: <b>Tropical Wheat</b></h1>
-        <p>V aromatičnem belgijskem pšeničnem pivu z močno oranžno barvo in belo kremasto peno prevladuje konkretna hmeljna grenkoba v kombinaciji z izrazito sladko aromo tropskega sadja pasijonke in manga.</p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-16" style="background-color: #eff4fa; padding: 50px;border-radius: 0px 50px 0px 50px;">
-        <h1>Maister Brewery: <b>Vega</b></h1>
-        <p>Pivo Vega so v pivovarni Maister poimenovali po Juriju Vegi, našemu najbolj slavnemu matematiku. Nežna hmeljna grenkoba in prijetna aroma tropskih sadežev, agrumov in sladke breskve naredi Vego zelo okusno in lahko pitno pivo.</p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-17" style="background-color: #c49d4a; padding: 50px;border-radius: 50px 0px 50px 0px;">
-        <h1>Mali Grad: <b>Black Magic Woman</b></h1>
-        <p>Pivo popolnoma črne barve in veliko kremasto bež peno je mešanica klasične IPE in temnega piva. Zmerna grenkoba in srednje močna aroma sladkega sadja in praženega sladu z dodatkom kave.</p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-18" style="background-color: #b92f2d; padding: 50px;border-radius: 0px 50px 0px 50px;">
-        <h1>Hopsbrew: <b>Kri pomaranče</b></h1>
-        <p>Pivo stila IPA je izdelano s tremi vrstami hmelja in seveda, kot pove že samo ime, je dodana tudi lupina sladke pomaranče. V pivu je čutiti izredno prijetno sadno aromo in izrazito hmeljno grenkobo.</p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-19" style="background-color: #3e4639; padding: 50px;border-radius: 50px 0px 50px 0px;color: white">
-        <h1>Maister Brewery: <b>Rusjan</b></h1>
-        <p>Kar štiri različne vrste aromatičnega hmelja zaznamuje okus svežega in pitnega IPA piva z aromo sladkega sadja, agrumov in vonja borovcev.</p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-20" style="background-color: #f25b6a; padding: 50px;border-radius: 0px 50px 0px 50px;">
-        <h1>Hopsbrew: <b>Illusion</b></h1>
-        <p>Lahkotno in izjemno osvežilno IPA pivo se ponaša s prijetno sadno aromo, rahlim pikantnim priokusom in srednjo hmeljno grenkobo.</p>
-      </div>
     </div>
 
+    <div class="col-6 h-100">
+      
 
-  </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-1" style="background-color: #bbbdaf; padding: 50px;border-radius: 50px 0px 50px 0px;">
+          <h1>Mali Grad: <b>Pale Ale</b></h1>
+          <p>Jantarno-zlato barvo hmeljnega napitka pokriva velika in obstojna pena bele barve. Nežna sadna aroma s pridihom karamele in visoka stopnja mehurčkov daje zelo okusnemu in pitnemu pivu prijetno svežino in osvežilen občutek.</p>
+        </div>
+      </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-2" style="background-color: #20b327; padding: 50px;border-radius: 0px 50px 0px 50px;">
+          <h1>Hopsbrew: <b>Pale Ale</b></h1>
+          <p>Pale Ale pivo izdelano na ameriški način. Motna oranžno-jantarna barva, na kateri kraljuje zelo obstojna bela kremasta pena, skriva v sebi aromo agrumov in sveže trave. Gre za izjemno pitno in osvežilno pivo.</p>
+        </div>
+      </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-3" style="background-color: #dcde25; padding: 50px;border-radius: 50px 0px 50px 0px;">
+          <h1>Barut: <b>Summer Snow</b></h1>
+          <p>Barutov Summer Snow se izraža z nežnimi kiselkastami notami vina, belega grozdja in rahlim pridihom začimb. Okusno, lahkotno in zelo osvežilno.</p>
+        </div>
+      </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-4" style="background-color: #eeefea; padding: 50px;border-radius: 0px 50px 0px 50px;">
+          <h1>Maister Brewery: <b>Gallus</b></h1>
+          <p>Osvežilni Pilsner z značilno mehurčkasto zlato barvo in belo peno, ki dokaj kmalu izzveni. Nežna travnata nota hmelja, prijetna grenkoba in komaj zaznavna sladkasta aroma vodijo v nadvse okusno in pitno pivo.</p>
+        </div>
+      </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-5" style="background-color: #45496c; padding: 50px;border-radius: 50px 0px 50px 0px;color: white">
+          <h1>Mister: <b>Nolan</b></h1>
+          <p>MISTER Nolan je svetlo in lahko pivo citrusnih arom varjen s popolno kombinacijo najbolj aromatičnih ameriških hmeljev ter z dodatki pšeničnega sladu, ki prispeva k svilnatemu telesu.</p>
+        </div>
+      </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-6" style="background-color: #cbcbc9; padding: 50px;border-radius: 0px 50px 0px 50px;">
+          <h1>Mali Grad: <b>Your Bitter Ex</b></h1>
+          <p>Motna jantarna barva je pokrita z manjšo umazano belo peno, aroma pa je sladkasta z izrazitejšo zeliščo noto, kar na koncu lepo zaokroži v lahko in pitno pivo.</p>
+        </div>
+      </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-7" style="background-color: #31322c; padding: 50px;border-radius: 50px 0px 50px 0px;color: white">
+          <h1>Hopsbrew: <b>Outmeal stout</b></h1>
+          <p>Izjemno polno pivo stila Stout je popolnoma črne barve, vrh pa krasi velika pena krem barve. Aroma temne čokolade z dodatkom vanilje vodi v izjemno prijetno in pitno pivo.</p>
+        </div>
+      </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-8" style="background-color: #953e34; padding: 50px;border-radius: 0px 50px 0px 50px;">
+          <h1>Barut: <b>Roadside Picnic</b></h1>
+          <p>Divji Pale Ale s čudovitim hmeljem Aurora in ščepecem sečuanskega popra, ki poudari sadnost. Suho, visoko pitno in harmonično Session pivo.</p>
+        </div>
+      </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-9" style="background-color: #0c0b06; padding: 50px;border-radius: 50px 0px 50px 0px;color: white">
+          <h1>Maister Brewery: <b>Noordung</b></h1>
+          <p>V pivovarni Maister so dotično pivo poimenovali po Hermanu Potočniku Noordungu, svetovno priznanemu raketnemu inženirju in enemu izmed pionirjev vesoljskih poletov. Gosto in kremasto pivo abstraktne črne barve z veliko, obstojno peno odlikuje aroma temne čokolade, z dodanimi notami vanilje in pražene kave. Lahko pitno in zelo okusno.</p>
+        </div>
+      </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-10" style="background-color: #414544; padding: 50px;border-radius: 0px 50px 0px 50px;color: white">
+          <h1>Mister: <b>Russel</b></h1>
+          <p>MISTER Russell je pivo stila IPA s 6% alkohola. Varjen je s slovenskim hmeljem, ki daje tropsko aromo ter karamelnimi in čokoladnimi sladovi, ki delajo Russlla za pravo sladico med pivi.</p>
+        </div>
+      </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-11" style="background-color: #b6b6aa; padding: 50px;border-radius: 50px 0px 50px 0px;">
+          <h1>Mali Grad: <b>India Pale Ale</b></h1>
+          <p>IPA pivo z oranžno-zlato barvo, katerega krasi solidna in obstojna pena bež barve ima prijetno sadno aromo agrumov in grenivke. Okus tega IPA piva zaznamuje zelo konkretna grenkoba, kar bo zadovoljilo tudi bolj zahtevne ljubitelje piv stila IPA.</p>
+        </div>
+      </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-12" style="background-color: #a55ae8; padding: 50px;border-radius: 0px 50px 0px 50px;">
+          <h1>Hopsbrew: <b>Porter</b></h1>
+          <p>Okusen porter s popolnoma črno barvo in kremasto peno bež barve se lahko pohvali z nežno aromo kave, čokolade ter lahkimi travnatimi notami hmelja.</p>
+        </div>
+      </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-13" style="background-color: #e7e3e2; padding: 50px;border-radius: 50px 0px 50px 0px;">
+          <h1>Maister Brewery: <b>General Maister</b></h1>
+          <p>V prijetni sadni aromi okusnega IPA piva se prepletajo note agrumov in tropskega sadja, okus pa zaznamuje rahla hmeljna grenčica.</p>
+        </div>
+      </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-14" style="background-color: #8d884e; padding: 50px;border-radius: 0px 50px 0px 50px;">
+          <h1>Mali Grad: <b>Your Obsession</b></h1>
+          <p>Pivo stila session IPA ima motno zlato barvo, pokriva pa ga obstojna, velika bela pena. Lahka sadna aroma z agrumi in tropskim sadjem ter nižjo stopnjo alkohola poskrbi za lahkotno in tako izjemno pitno pivo.</p>
+        </div>
+      </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-15" style="background-color: #d1c936; padding: 50px;border-radius: 50px 0px 50px 0px;">
+          <h1>Hopsbrew: <b>Tropical Wheat</b></h1>
+          <p>V aromatičnem belgijskem pšeničnem pivu z močno oranžno barvo in belo kremasto peno prevladuje konkretna hmeljna grenkoba v kombinaciji z izrazito sladko aromo tropskega sadja pasijonke in manga.</p>
+        </div>
+      </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-16" style="background-color: #eff4fa; padding: 50px;border-radius: 0px 50px 0px 50px;">
+          <h1>Maister Brewery: <b>Vega</b></h1>
+          <p>Pivo Vega so v pivovarni Maister poimenovali po Juriju Vegi, našemu najbolj slavnemu matematiku. Nežna hmeljna grenkoba in prijetna aroma tropskih sadežev, agrumov in sladke breskve naredi Vego zelo okusno in lahko pitno pivo.</p>
+        </div>
+      </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-17" style="background-color: #c49d4a; padding: 50px;border-radius: 50px 0px 50px 0px;">
+          <h1>Mali Grad: <b>Black Magic Woman</b></h1>
+          <p>Pivo popolnoma črne barve in veliko kremasto bež peno je mešanica klasične IPE in temnega piva. Zmerna grenkoba in srednje močna aroma sladkega sadja in praženega sladu z dodatkom kave.</p>
+        </div>
+      </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-18" style="background-color: #b92f2d; padding: 50px;border-radius: 0px 50px 0px 50px;">
+          <h1>Hopsbrew: <b>Kri pomaranče</b></h1>
+          <p>Pivo stila IPA je izdelano s tremi vrstami hmelja in seveda, kot pove že samo ime, je dodana tudi lupina sladke pomaranče. V pivu je čutiti izredno prijetno sadno aromo in izrazito hmeljno grenkobo.</p>
+        </div>
+      </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-19" style="background-color: #3e4639; padding: 50px;border-radius: 50px 0px 50px 0px;color: white">
+          <h1>Maister Brewery: <b>Rusjan</b></h1>
+          <p>Kar štiri različne vrste aromatičnega hmelja zaznamuje okus svežega in pitnega IPA piva z aromo sladkega sadja, agrumov in vonja borovcev.</p>
+        </div>
+      </div>
+      <div class="position-absolute w-100 h-100 d-flex">
+        <div class="align-self-center w-100" id="opis-20" style="background-color: #f25b6a; padding: 50px;border-radius: 0px 50px 0px 50px;">
+          <h1>Hopsbrew: <b>Illusion</b></h1>
+          <p>Lahkotno in izjemno osvežilno IPA pivo se ponaša s prijetno sadno aromo, rahlim pikantnim priokusom in srednjo hmeljno grenkobo.</p>
+        </div>
+      </div>
 
-  </div>
+
+    </div>
+
+    </div>
+    </div>
+
+
+    <div class="w-100 h-100 position-absolute" id="startLogo">
+      <div class="row h-100 d-flex">
+          <div class="align-self-center" style="width: 485px; height: 405px; margin-left: auto; margin-right: auto; position: relative;">
+              <img id="layer-0" style="position: absolute;" src="img/logo/Layer0.png">
+              <img id="bottle-1" src="img/logo/bottle.png" style="position: absolute; left: 377px; top: 48px;">
+              <img id="bottle-2" src="img/logo/bottle.png" style="position: absolute; left: 316px; top: 43px;">
+              <img id="bottle-3" src="img/logo/bottle.png" style="position: absolute; left: 258px; top: 36px;">
+              <img id="bottle-4" src="img/logo/bottle.png" style="position: absolute; left: 199px; top: 31px;">
+              <img id="bottle-5" src="img/logo/bottle.png" style="position: absolute; left: 137px; top: 24px;">
+              <img id="bottle-6" src="img/logo/bottle.png" style="position: absolute; left: 350px; top: 61px;">
+              <img id="bottle-7" src="img/logo/bottle.png" style="position: absolute; left: 290px; top: 55px;">
+              <img id="bottle-8" src="img/logo/bottle.png" style="position: absolute; left: 229px; top: 48px;">
+              <img id="bottle-9" src="img/logo/bottle.png" style="position: absolute; left: 171px; top: 43px;">
+              <img id="bottle-10" src="img/logo/bottle.png" style="position: absolute; left: 107px; top: 36px;">
+              <img id="bottle-11" src="img/logo/bottle.png" style="position: absolute; left: 324px; top: 75px;">
+              <img id="bottle-12" src="img/logo/bottle.png" style="position: absolute; left: 260px; top: 65px;">
+              <img id="bottle-13" src="img/logo/bottle.png" style="position: absolute; left: 200px; top: 55px;">
+              <img id="bottle-14" src="img/logo/bottle.png" style="position: absolute; left: 137px; top: 55px;">
+              <img id="bottle-15" src="img/logo/bottle.png" style="position: absolute; left: 73px; top: 46px;">
+              <img id="bottle-16" src="img/logo/bottle.png" style="position: absolute; left: 42px; top: 55px;">
+              <img id="bottle-17" src="img/logo/bottle.png" style="position: absolute; left: 111px; top: 63px;">
+              <img id="bottle-18" src="img/logo/bottle.png" style="position: absolute; left: 174px; top: 75px;">
+              <img id="bottle-19" src="img/logo/bottle.png" style="position: absolute; left: 237px; top: 83px;">
+              <img id="bottle-20" src="img/logo/bottle.png" style="position: absolute; left: 306px; top: 90px;">
+              <img id="layer-1" style="position: absolute;" src="img/logo/Layer1.png">
+          </div>
+        </div>
+    </div>
+
   </div>
 </div>
 
@@ -642,18 +679,88 @@ img.pivo {
  -->
 
 <script>
-var bottlePositions = [{},{x:377,y:48},{x:316,y:43},{x:258,y:36},{x:199,y:31},{x:137,y:24},{x:350,y:61},{x:290,y:55},{x:229,y:48},{x:171,y:43},{x:107,y:36},{x:324,y:75},{x:260,y:65},{x:200,y:55},{x:137,y:55},{x:73,y:46},{x:42,y:55},{x:111,y:63},{x:174,y:75},{x:237,y:83},{x:306,y:90}];
+var bottlePositions = [{x:0,y:0},{x:377,y:48},{x:316,y:43},{x:258,y:36},{x:199,y:31},{x:137,y:24},{x:350,y:61},{x:290,y:55},{x:229,y:48},{x:171,y:43},{x:107,y:36},{x:324,y:75},{x:260,y:65},{x:200,y:55},{x:137,y:55},{x:73,y:46},{x:42,y:55},{x:111,y:63},{x:174,y:75},{x:237,y:83},{x:306,y:90},{x:0,y:0}];
 var logoFactor = 0.25;
 var logoOffset = {top: 20, left: 20}
 
+// init controller
+var controller = new ScrollMagic.Controller();
+
 window.onbeforeunload = function(){ window.scrollTo(0,0); }
 
-$(function() {
+$(window).on("load", function() {
   $(".logo").offset(logoOffset);
   $(".logo").width(Math.round(485*logoFactor));
+
+  setupLandingBox();
+
   setupSlides(20);
   setupBackgroundScroll();
 });
+
+function setupLandingBox() {
+  var timeline = new TimelineMax();
+
+  for (var i=0; i<=21; i++) {
+    if (i == 0) {
+      var element = $('#layer-0');
+    } else if (i == 21) {
+      var element = $('#layer-1');
+    } else {
+      var element = $('#bottle-'+i);
+    }
+
+    var startPos = $(element).offset();
+    var startWidth = $(element).width();
+    var startHeight = $(element).height();
+
+    $(element).css({
+      top: startPos.top,
+      left: startPos.left,
+      position: "fixed"
+    });
+
+    timeline.add(
+      new TweenMax.to(element, 2, {
+        top: Math.round(bottlePositions[i].y * logoFactor) + logoOffset.top,
+        left: Math.round(bottlePositions[i].x * logoFactor) + logoOffset.left,
+        width: Math.round(startWidth*logoFactor),
+        height: Math.round(startHeight*logoFactor),
+        ease: Power2.easeInOut
+      }), 0
+    );
+    
+  }
+
+  new ScrollMagic.Scene({
+      offset: 500,	// px
+      duration: 490 //px
+    })
+    .setTween(timeline)
+    .addIndicators()
+    .addTo(controller);
+
+
+  var timeline = new TimelineMax();
+  
+  timeline.add(
+    new TweenMax.to('#content-container', 2, {
+      visibility:'visible'
+    })
+  );
+  timeline.add(
+    new TweenMax.to('#startLogo', 2, {
+      visibility:'hidden'
+    })
+  );
+  new ScrollMagic.Scene({
+    offset: 990,	// px
+    duration: 10 //px
+  })
+  .setTween(timeline)
+  .addIndicators()
+  .addTo(controller);
+}
 
 function setupSlides(numberOfSlides) {
 
@@ -724,9 +831,6 @@ function setupSlides(numberOfSlides) {
       ease: Power2.easeInOut
     });
   }
-
-  // init controller
-  var controller = new ScrollMagic.Controller();
 
   for (var i=1; i<=numberOfSlides; i++) {
 
