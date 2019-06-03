@@ -33,14 +33,18 @@
   background-blend-mode: lighten;
 }
 
-#logo {
+.logo {
   position: fixed;
-  top: 20px;
-  left: 20px;
 }
 
 #logo img {
   position: absolute;
+}
+
+img.pivo {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
 
@@ -63,66 +67,6 @@
 
 
 <div id="set-height"></div>
-
-<div id="view-frame">
-
-  <div class="container h-100">
-  <div class="row h-100">
-
-  <div class="col-6 h-100">
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-1" src="img/piva2/black_magic_woman.png" class="h-100 mx-auto d-block">
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-2" src="img/piva2/gallus.png" class="h-100 mx-auto d-block">
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-3" src="img/piva2/general_maister.png" class="h-100 mx-auto d-block">
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100 h-50">
-        <img id="pivo-4" src="img/piva2/illusion.png" class="h-100 mx-auto d-block">
-      </div>
-    </div>
-  </div>
-
-  <div class="col-6 h-100">
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-1" style="background-color: #b48d40; padding: 50px;">
-        <h1>Title 1</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est vitae dui fringilla aliquet. Aenean ipsum ligula, ornare non vulputate vitae, pulvinar vel felis. Phasellus ultrices, felis eget varius luctus, justo elit luctus lacus, at ultricies risus lacus finibus massa. Mauris mollis, dolor pharetra rutrum dignissim, erat enim ultrices nibh, varius molestie enim lorem ut sem. Nunc quis facilisis turpis, vel sagittis tortor. Sed id gravida augue, eget faucibus ligula. Phasellus vitae libero eu erat sollicitudin faucibus. </p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-2" style="background-color: #e3e2dd; padding: 50px; border-radius: 50px;">
-        <h1>Title 2</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est vitae dui fringilla aliquet. Aenean ipsum ligula, ornare non vulputate vitae, pulvinar vel felis. Phasellus ultrices, felis eget varius luctus, justo elit luctus lacus, at ultricies risus lacus finibus massa. Mauris mollis, dolor pharetra rutrum dignissim, erat enim ultrices nibh, varius molestie enim lorem ut sem. Nunc quis facilisis turpis, vel sagittis tortor. Sed id gravida augue, eget faucibus ligula. Phasellus vitae libero eu erat sollicitudin faucibus. </p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-3" style="background-color: #edebec; padding: 50px; border-radius: 50px 0px 50px 0px;">
-        <h1>Title 3</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est vitae dui fringilla aliquet. Aenean ipsum ligula, ornare non vulputate vitae, pulvinar vel felis. Phasellus ultrices, felis eget varius luctus, justo elit luctus lacus, at ultricies risus lacus finibus massa. Mauris mollis, dolor pharetra rutrum dignissim, erat enim ultrices nibh, varius molestie enim lorem ut sem. Nunc quis facilisis turpis, vel sagittis tortor. Sed id gravida augue, eget faucibus ligula. Phasellus vitae libero eu erat sollicitudin faucibus. </p>
-      </div>
-    </div>
-    <div class="position-absolute w-100 h-100 d-flex">
-      <div class="align-self-center w-100" id="opis-4" style="background-color: #1e251d; padding: 50px; border-radius: 0px 50px 0px 50px; color: white">
-        <h1>Title 4</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est vitae dui fringilla aliquet. Aenean ipsum ligula, ornare non vulputate vitae, pulvinar vel felis. Phasellus ultrices, felis eget varius luctus, justo elit luctus lacus, at ultricies risus lacus finibus massa. Mauris mollis, dolor pharetra rutrum dignissim, erat enim ultrices nibh, varius molestie enim lorem ut sem. Nunc quis facilisis turpis, vel sagittis tortor. Sed id gravida augue, eget faucibus ligula. Phasellus vitae libero eu erat sollicitudin faucibus. </p>
-      </div>
-    </div>
-  </div>
-
-  </div>
-  </div>
-</div>
-
 
 <img id="ozadje-297" src="img/bkg/297.jpg" class="slika-ozadje">
 <img id="ozadje-296" src="img/bkg/296.jpg" class="slika-ozadje">
@@ -423,7 +367,71 @@
 <img id="ozadje-1" src="img/bkg/1.jpg" class="slika-ozadje">
 
 
-<div id="logo">
+
+<div id="view-frame">
+
+  <div class="container h-100">
+  <div class="row h-100">
+
+  <div class="col-6 h-100">
+    <img class="logo" src="img/logo/Layer0.png" style="width: 242px;">
+    <img class="logo" src="img/logo/Layer1.png" style="width: 242px; z-index: 1">
+
+    <div class="position-absolute w-100 h-100 d-flex">
+      <div class="align-self-center w-100 h-50">
+        <img id="pivo-1" src="img/piva2/black_magic_woman.png" class="pivo d-block">
+      </div>
+    </div>
+    <div class="position-absolute w-100 h-100 d-flex">
+      <div class="align-self-center w-100 h-50">
+        <img id="pivo-2" src="img/piva2/gallus.png" class="pivo d-block">
+      </div>
+    </div>
+    <div class="position-absolute w-100 h-100 d-flex">
+      <div class="align-self-center w-100 h-50">
+        <img id="pivo-3" src="img/piva2/general_maister.png" class="pivo d-block">
+      </div>
+    </div>
+    <div class="position-absolute w-100 h-100 d-flex">
+      <div class="align-self-center w-100 h-50">
+        <img id="pivo-4" src="img/piva2/illusion.png" class="pivo d-block">
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6 h-100">
+    <div class="position-absolute w-100 h-100 d-flex">
+      <div class="align-self-center w-100" id="opis-1" style="background-color: #b48d40; padding: 50px;">
+        <h1>Title 1</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est vitae dui fringilla aliquet. Aenean ipsum ligula, ornare non vulputate vitae, pulvinar vel felis. Phasellus ultrices, felis eget varius luctus, justo elit luctus lacus, at ultricies risus lacus finibus massa. Mauris mollis, dolor pharetra rutrum dignissim, erat enim ultrices nibh, varius molestie enim lorem ut sem. Nunc quis facilisis turpis, vel sagittis tortor. Sed id gravida augue, eget faucibus ligula. Phasellus vitae libero eu erat sollicitudin faucibus. </p>
+      </div>
+    </div>
+    <div class="position-absolute w-100 h-100 d-flex">
+      <div class="align-self-center w-100" id="opis-2" style="background-color: #e3e2dd; padding: 50px; border-radius: 50px;">
+        <h1>Title 2</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est vitae dui fringilla aliquet. Aenean ipsum ligula, ornare non vulputate vitae, pulvinar vel felis. Phasellus ultrices, felis eget varius luctus, justo elit luctus lacus, at ultricies risus lacus finibus massa. Mauris mollis, dolor pharetra rutrum dignissim, erat enim ultrices nibh, varius molestie enim lorem ut sem. Nunc quis facilisis turpis, vel sagittis tortor. Sed id gravida augue, eget faucibus ligula. Phasellus vitae libero eu erat sollicitudin faucibus. </p>
+      </div>
+    </div>
+    <div class="position-absolute w-100 h-100 d-flex">
+      <div class="align-self-center w-100" id="opis-3" style="background-color: #edebec; padding: 50px; border-radius: 50px 0px 50px 0px;">
+        <h1>Title 3</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est vitae dui fringilla aliquet. Aenean ipsum ligula, ornare non vulputate vitae, pulvinar vel felis. Phasellus ultrices, felis eget varius luctus, justo elit luctus lacus, at ultricies risus lacus finibus massa. Mauris mollis, dolor pharetra rutrum dignissim, erat enim ultrices nibh, varius molestie enim lorem ut sem. Nunc quis facilisis turpis, vel sagittis tortor. Sed id gravida augue, eget faucibus ligula. Phasellus vitae libero eu erat sollicitudin faucibus. </p>
+      </div>
+    </div>
+    <div class="position-absolute w-100 h-100 d-flex">
+      <div class="align-self-center w-100" id="opis-4" style="background-color: #1e251d; padding: 50px; border-radius: 0px 50px 0px 50px; color: white">
+        <h1>Title 4</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mattis est vitae dui fringilla aliquet. Aenean ipsum ligula, ornare non vulputate vitae, pulvinar vel felis. Phasellus ultrices, felis eget varius luctus, justo elit luctus lacus, at ultricies risus lacus finibus massa. Mauris mollis, dolor pharetra rutrum dignissim, erat enim ultrices nibh, varius molestie enim lorem ut sem. Nunc quis facilisis turpis, vel sagittis tortor. Sed id gravida augue, eget faucibus ligula. Phasellus vitae libero eu erat sollicitudin faucibus. </p>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+</div>
+
+<!-- 
+<div class="logo">
   <img src="img/logo/Layer0.png" style="width: 242px;">
 
   <img id="bottle-1" src="img/logo/bottle.png" style="width: 39px; left: 188px; top: 24px;">
@@ -449,40 +457,83 @@
 
   <img src="img/logo/Layer1.png" style="width: 242px;">
 </div>
+ -->
 
 <script>
+var bottlePositions = [{x:377,y:48},{x:316,y:43},{x:258,y:36},{x:199,y:31},{x:137,y:24},{x:350,y:61},{x:290,y:55},{x:229,y:48},{x:171,y:43},{x:107,y:36},{x:324,y:75},{x:260,y:65},{x:200,y:55},{x:137,y:55},{x:73,y:46},{x:42,y:55},{x:111,y:63},{x:174,y:75},{x:237,y:83},{x:306,y:90}];
+var bottlePositionFactor = 0.5;
+var logoOffset = {top: 20, left: 20}
+
 window.onbeforeunload = function(){ window.scrollTo(0,0); }
 
 $(function() {
+  $(".logo").offset(logoOffset);
   setupSlides(4);
   setupBackgroundScroll();
 });
 
 function setupSlides(numberOfSlides) {
 
-  function slideUp(selector) {
-    return new TweenMax.from(selector, 2, {
+  function fromBox(element, i) {
+    var endPos = $(element).offset();
+    var endHeight = $(element).height();
+
+    var startPos = {
+      top: Math.round(bottlePositions[i].y * bottlePositionFactor) + logoOffset.top,
+      left: Math.round(bottlePositions[i].x * bottlePositionFactor) + logoOffset.left,
+    };
+
+    $(element).css({
+      width: "39px",
+      height: "128px",
+      marginLeft: "0px",
+      marginRight: "0px",
+      position: "fixed"
+    });
+    $(element).css(startPos);
+
+
+    var b = [];
+    b.push({top: -50, left: 250});
+    b.push(startPos);
+
+    return new TweenMax.to(element, 2, {
+      bezier: [
+        {left:Math.round(startPos.left + (endPos.left-startPos.left)/4), top:-200},
+        {left:Math.round(startPos.left + 2*(endPos.left-startPos.left)/3), top:startPos.top},
+        endPos
+      ],
+      width: "auto",
+      height: endHeight,
+      marginLeft: "auto",
+      marginRight: "auto",
+      ease: Power2.easeInOut
+    });
+  }
+
+  function slideUp(element) {
+    return new TweenMax.from(element, 2, {
       y: $(window).height(),
       ease: Power2.easeInOut
     });
   }
 
-  function moveUp(selector) {
-    return new TweenMax.to(selector, 2, {
+  function moveUp(element) {
+    return new TweenMax.to(element, 2, {
       y: "-="+$(window).height(),
       ease: Power2.easeInOut
     });
   }
 
-  function slideDown(selector) {
-    return new TweenMax.from(selector, 2, {
-      y: -$(window).height(),
+  function slideDown(element) {
+    return new TweenMax.from(element, 2, {
+      y: -$(window).height()-element.height(),
       ease: Power2.easeInOut
     });
   }
 
-  function moveDown(selector) {
-    return new TweenMax.to(selector, 2, {
+  function moveDown(element) {
+    return new TweenMax.to(element, 2, {
       y: "+="+$(window).height(),
       ease: Power2.easeInOut
     });
@@ -494,11 +545,11 @@ function setupSlides(numberOfSlides) {
   for (var i=1; i<=numberOfSlides; i++) {
 
     var timeline = new TimelineMax();
-    timeline.add(slideUp('#pivo-'+i), 0);
-    timeline.add(slideDown('#opis-'+i), 0)
+    timeline.add(fromBox($('#pivo-'+i), i), 0);
+    timeline.add(slideUp($('#opis-'+i)), 0);
     if (i > 1) {
-      timeline.add(moveUp('#pivo-'+(i-1)), 0);
-      timeline.add(moveDown('#opis-'+(i-1)), 0);
+      timeline.add(moveDown($('#pivo-'+(i-1))), 0);
+      timeline.add(moveUp($('#opis-'+(i-1))), 0);
     }
 
     new ScrollMagic.Scene({
@@ -510,12 +561,13 @@ function setupSlides(numberOfSlides) {
 
   }
 
-  var timeline = new TimelineMax();
+  /* var timeline = new TimelineMax();
   for (var i=1; i<=20; i++) {
     timeline.add(
-      new TweenMax.from('#bottle-'+i, 1, {
-        y: -200,
-        ease: Power2.easeInOut
+      new TweenMax.to('#bottle-'+i, 1, {
+        ease: Power2.easeInOut,
+        bezier:[{left:150, top:-130}, {left:250, top:-170} ,{left:400, top:20}, {left:500, top:400}],
+        scale: 4
       })
     );
   }
@@ -525,7 +577,7 @@ function setupSlides(numberOfSlides) {
     })
     .setTween(timeline)
     .addIndicators()
-    .addTo(controller);
+    .addTo(controller); */
 
 }
 
