@@ -37,6 +37,18 @@ body {
   background-blend-mode: lighten;
 }
 
+#startBackground {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/bar.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
 .logo {
   position: fixed;
 }
@@ -49,6 +61,14 @@ img.pivo {
   height: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.animate-bottle {
+  opacity: 0;
+}
+
+#opisi div {
+  position: relative;
 }
 </style>
 
@@ -72,6 +92,7 @@ img.pivo {
 
 <div id="set-height"></div>
 
+<div>
 <img id="ozadje-297" src="img/bkg/297.jpg" class="slika-ozadje">
 <img id="ozadje-296" src="img/bkg/296.jpg" class="slika-ozadje">
 <img id="ozadje-295" src="img/bkg/295.jpg" class="slika-ozadje">
@@ -369,7 +390,7 @@ img.pivo {
 <img id="ozadje-3" src="img/bkg/3.jpg" class="slika-ozadje">
 <img id="ozadje-2" src="img/bkg/2.jpg" class="slika-ozadje">
 <img id="ozadje-1" src="img/bkg/1.jpg" class="slika-ozadje">
-
+</div>
 
 
 <div id="view-frame">
@@ -486,7 +507,7 @@ img.pivo {
 
     </div>
 
-    <div class="col-6 h-100">
+    <div class="col-6 h-100" id="opisi">
       
 
       <div class="position-absolute w-100 h-100 d-flex">
@@ -617,30 +638,31 @@ img.pivo {
     </div>
 
 
-    <div class="w-100 h-100 position-absolute" id="startLogo">
+    <div id="startBackground"></div>
+    <div class="w-100 position-absolute" id="startLogo" style="height: 62%;">
       <div class="row h-100 d-flex">
-          <div class="align-self-center" style="width: 485px; height: 405px; margin-left: auto; margin-right: auto; position: relative;">
+          <div class="align-self-end" style="width: 485px; height: 405px; margin-left: auto; margin-right: auto; position: relative;">
               <img id="layer-0" style="position: absolute;" src="img/logo/Layer0.png">
-              <img id="bottle-1" src="img/logo/bottle.png" style="position: absolute; left: 377px; top: 48px;">
-              <img id="bottle-2" src="img/logo/bottle.png" style="position: absolute; left: 316px; top: 43px;">
-              <img id="bottle-3" src="img/logo/bottle.png" style="position: absolute; left: 258px; top: 36px;">
-              <img id="bottle-4" src="img/logo/bottle.png" style="position: absolute; left: 199px; top: 31px;">
-              <img id="bottle-5" src="img/logo/bottle.png" style="position: absolute; left: 137px; top: 24px;">
-              <img id="bottle-6" src="img/logo/bottle.png" style="position: absolute; left: 350px; top: 61px;">
-              <img id="bottle-7" src="img/logo/bottle.png" style="position: absolute; left: 290px; top: 55px;">
-              <img id="bottle-8" src="img/logo/bottle.png" style="position: absolute; left: 229px; top: 48px;">
-              <img id="bottle-9" src="img/logo/bottle.png" style="position: absolute; left: 171px; top: 43px;">
-              <img id="bottle-10" src="img/logo/bottle.png" style="position: absolute; left: 107px; top: 36px;">
-              <img id="bottle-11" src="img/logo/bottle.png" style="position: absolute; left: 324px; top: 75px;">
-              <img id="bottle-12" src="img/logo/bottle.png" style="position: absolute; left: 260px; top: 65px;">
-              <img id="bottle-13" src="img/logo/bottle.png" style="position: absolute; left: 200px; top: 55px;">
-              <img id="bottle-14" src="img/logo/bottle.png" style="position: absolute; left: 137px; top: 55px;">
-              <img id="bottle-15" src="img/logo/bottle.png" style="position: absolute; left: 73px; top: 46px;">
-              <img id="bottle-16" src="img/logo/bottle.png" style="position: absolute; left: 42px; top: 55px;">
-              <img id="bottle-17" src="img/logo/bottle.png" style="position: absolute; left: 111px; top: 63px;">
-              <img id="bottle-18" src="img/logo/bottle.png" style="position: absolute; left: 174px; top: 75px;">
-              <img id="bottle-19" src="img/logo/bottle.png" style="position: absolute; left: 237px; top: 83px;">
-              <img id="bottle-20" src="img/logo/bottle.png" style="position: absolute; left: 306px; top: 90px;">
+              <img class="animate-bottle" id="bottle-1" src="img/logo/bottle.png" style="position: absolute; left: 377px; top: 48px;">
+              <img class="animate-bottle" id="bottle-2" src="img/logo/bottle.png" style="position: absolute; left: 316px; top: 43px;">
+              <img class="animate-bottle" id="bottle-3" src="img/logo/bottle.png" style="position: absolute; left: 258px; top: 36px;">
+              <img class="animate-bottle" id="bottle-4" src="img/logo/bottle.png" style="position: absolute; left: 199px; top: 31px;">
+              <img class="animate-bottle" id="bottle-5" src="img/logo/bottle.png" style="position: absolute; left: 137px; top: 24px;">
+              <img class="animate-bottle" id="bottle-6" src="img/logo/bottle.png" style="position: absolute; left: 350px; top: 61px;">
+              <img class="animate-bottle" id="bottle-7" src="img/logo/bottle.png" style="position: absolute; left: 290px; top: 55px;">
+              <img class="animate-bottle" id="bottle-8" src="img/logo/bottle.png" style="position: absolute; left: 229px; top: 48px;">
+              <img class="animate-bottle" id="bottle-9" src="img/logo/bottle.png" style="position: absolute; left: 171px; top: 43px;">
+              <img class="animate-bottle" id="bottle-10" src="img/logo/bottle.png" style="position: absolute; left: 107px; top: 36px;">
+              <img class="animate-bottle" id="bottle-11" src="img/logo/bottle.png" style="position: absolute; left: 324px; top: 75px;">
+              <img class="animate-bottle" id="bottle-12" src="img/logo/bottle.png" style="position: absolute; left: 260px; top: 65px;">
+              <img class="animate-bottle" id="bottle-13" src="img/logo/bottle.png" style="position: absolute; left: 200px; top: 55px;">
+              <img class="animate-bottle" id="bottle-14" src="img/logo/bottle.png" style="position: absolute; left: 137px; top: 55px;">
+              <img class="animate-bottle" id="bottle-15" src="img/logo/bottle.png" style="position: absolute; left: 73px; top: 46px;">
+              <img class="animate-bottle" id="bottle-16" src="img/logo/bottle.png" style="position: absolute; left: 42px; top: 55px;">
+              <img class="animate-bottle" id="bottle-17" src="img/logo/bottle.png" style="position: absolute; left: 111px; top: 63px;">
+              <img class="animate-bottle" id="bottle-18" src="img/logo/bottle.png" style="position: absolute; left: 174px; top: 75px;">
+              <img class="animate-bottle" id="bottle-19" src="img/logo/bottle.png" style="position: absolute; left: 237px; top: 83px;">
+              <img class="animate-bottle" id="bottle-20" src="img/logo/bottle.png" style="position: absolute; left: 306px; top: 90px;">
               <img id="layer-1" style="position: absolute;" src="img/logo/Layer1.png">
           </div>
         </div>
@@ -682,6 +704,7 @@ img.pivo {
 var bottlePositions = [{x:0,y:0},{x:377,y:48},{x:316,y:43},{x:258,y:36},{x:199,y:31},{x:137,y:24},{x:350,y:61},{x:290,y:55},{x:229,y:48},{x:171,y:43},{x:107,y:36},{x:324,y:75},{x:260,y:65},{x:200,y:55},{x:137,y:55},{x:73,y:46},{x:42,y:55},{x:111,y:63},{x:174,y:75},{x:237,y:83},{x:306,y:90},{x:0,y:0}];
 var logoFactor = 0.25;
 var logoOffset = {top: 20, left: 20}
+var frameFactor = 100;
 
 // init controller
 var controller = new ScrollMagic.Controller();
@@ -689,6 +712,7 @@ var controller = new ScrollMagic.Controller();
 window.onbeforeunload = function(){ window.scrollTo(0,0); }
 
 $(window).on("load", function() {
+  frameFactor = $("#set-height").height() / 296;
   $(".logo").offset(logoOffset);
   $(".logo").width(Math.round(485*logoFactor));
 
@@ -696,6 +720,20 @@ $(window).on("load", function() {
 
   setupSlides(20);
   setupBackgroundScroll();
+
+  TweenMax.from('.animate-bottle', 2, {
+    top: "-=200",
+    ease: Power2.easeInOut
+  })
+
+  document.onkeydown = function(e) {
+    e = e || window.event;
+    if (e.keyCode == '38') {
+      $('html, body').animate({scrollTop: '-=1000'}, 1000);
+    } else if (e.keyCode == '40') {
+      $('html, body').animate({scrollTop: '+=1000'}, 1000);
+    }
+  };
 });
 
 function setupLandingBox() {
@@ -717,7 +755,8 @@ function setupLandingBox() {
     $(element).css({
       top: startPos.top,
       left: startPos.left,
-      position: "fixed"
+      position: "fixed",
+      opacity: 1
     });
 
     timeline.add(
@@ -733,10 +772,20 @@ function setupLandingBox() {
   }
 
   new ScrollMagic.Scene({
-      offset: 500,	// px
-      duration: 490 //px
+      offset: 100,	// px
+      duration: 890 //px
     })
     .setTween(timeline)
+    //.addIndicators()
+    .addTo(controller);
+
+  new ScrollMagic.Scene({
+      offset: 500,	// px
+      duration: 500 //px
+    })
+    .setTween(new TweenMax.to('#startBackground', 2, {
+        opacity: 0
+      }))
     //.addIndicators()
     .addTo(controller);
 
@@ -753,12 +802,17 @@ function setupLandingBox() {
       visibility:'hidden'
     })
   );
+  timeline.add(
+    new TweenMax.to('#startBackground', 2, {
+      display: 'none'
+    })
+  );
   new ScrollMagic.Scene({
     offset: 990,	// px
     duration: 10 //px
   })
   .setTween(timeline)
-  .addIndicators()
+  //.addIndicators()
   .addTo(controller);
 }
 
@@ -784,6 +838,13 @@ function setupSlides(numberOfSlides) {
     });
     $(element).css(startPos);
 
+    $(element).hover(function() {
+        TweenLite.to($(this), 1, {rotation: 360});
+      }, function() {
+        TweenLite.to($(this), 1, {rotation: 0});
+      }
+    );  
+
 
     var b = [];
     b.push({top: -50, left: 250});
@@ -800,7 +861,8 @@ function setupSlides(numberOfSlides) {
       marginLeft: "auto",
       marginRight: "auto",
       ease: Power2.easeInOut,
-      attr: {src: imgSrc}
+      attr: {src: imgSrc},
+      zIndex: 1
     });
   }
 
@@ -813,14 +875,7 @@ function setupSlides(numberOfSlides) {
 
   function moveUp(element) {
     return new TweenMax.to(element, 2, {
-      y: "-="+$(window).height(),
-      ease: Power2.easeInOut
-    });
-  }
-
-  function slideDown(element) {
-    return new TweenMax.from(element, 2, {
-      y: -$(window).height()-element.height(),
+      top: -$(window).height(),
       ease: Power2.easeInOut
     });
   }
@@ -866,7 +921,7 @@ function setupSlides(numberOfSlides) {
       offset: 100	// px
     })
     .setTween(timeline)
-    .addIndicators()
+    //.addIndicators()
     .addTo(controller); */
 
 }
@@ -879,7 +934,7 @@ function setupBackgroundScroll() {
 
   // Use requestAnimationFrame for smooth playback
   function scrollPlay(){  
-    frameNumber  = Math.floor(window.pageYOffset/100)+1;
+    frameNumber  = Math.floor(window.pageYOffset/frameFactor)+1;
     document.getElementById('view-frame').style.backgroundImage = "url('img/bkg/"+frameNumber+".jpg')";
 
     /* if (frameNumber != previousFrameNumber) {
